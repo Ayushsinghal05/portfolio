@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import {
-  faCss3,
   faGitAlt,
   faHtml5,
   faJsSquare,
@@ -11,6 +10,7 @@ import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './index.scss'
+import cplusplus from '../../assets/images/cplusplus.svg'
 
 const About = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -33,10 +33,14 @@ const About = () => {
             />
           </h1>
           <p>
-          </p>
-          <p align="LEFT">
+            I am a second year student at Purdue University studying Computer Science and Mathematics with a concentration in Machine Intelligence.
           </p>
           <p>
+            I enjoy being a part of Hack the Future - an academic club on campus dedicated to improving the digital presence
+            of non-profits in the local area. We create React websites according to specifications from the organizations we work with.
+          </p>
+          <p>
+          In my free time, I enjoy playing sports such as Basketball and I am an avid fan of the 49ers, Kings, and Dodgers.
           </p>
         </div>
 
@@ -49,7 +53,7 @@ const About = () => {
               <FontAwesomeIcon icon={faHtml5} color="#F06529" />
             </div>
             <div className="face3">
-              <FontAwesomeIcon icon={faCss3} color="#28A4D9" />
+              <img src={cplusplus} alt="C++ Logo" style={{ width: '60%', height: 'auto' }}/>
             </div>
             <div className="face4">
               <FontAwesomeIcon icon={faReact} color="#5ED4F4" />
