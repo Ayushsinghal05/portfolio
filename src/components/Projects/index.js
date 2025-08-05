@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Loader from "react-loaders";
 import AnimatedLetters from "../AnimatedLetters";
 import "./index.scss";
+import intellijIcon from "../../assets/images/IntelliJ_IDEA_Icon.svg.png";
 
 const Projects = () => {
-    const [letterClass, setLetterClass] = useState('text-animate');
+    const letterClass = 'text-animate';
 
     return (
         <>
@@ -16,10 +17,31 @@ const Projects = () => {
                     idx={15}
                 />
             </h1>
-
-        </div>
-        <div className="images-container">
             
+            <div className="images-container">
+                <div className="image-box">
+                    <div className="projects-image">
+                        <img 
+                            src={intellijIcon}
+                            alt="Deprecated Controller Remover Plugin"
+                        />
+                    </div>
+                    <div className="content">
+                        <p className="title">Deprecated Controller Remover</p>
+                        <h4 className="description">JetBrains Plugin</h4>
+                        <p className="description">
+                            A JetBrains IDE plugin that helps developers remove deprecated controller methods 
+                            from their codebase, improving code quality and maintainability.
+                        </p>
+                        <button 
+                            className="btn" 
+                            onClick={() => window.open('https://plugins.jetbrains.com/plugin/28069-deprecated-controller-remover/edit', '_blank')}
+                        >
+                            View Plugin
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
         <Loader type="pacman" />
         </>
