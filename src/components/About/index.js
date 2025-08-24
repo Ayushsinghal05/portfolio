@@ -6,7 +6,6 @@ import {
   faPython,
   faReact,
 } from '@fortawesome/free-brands-svg-icons'
-import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './index.scss'
@@ -16,11 +15,9 @@ const About = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
 
   useEffect(() => {
-    setTimeout(() => {
-      return setLetterClass('text-animate-hover')
-    }, 3000)
+    setLetterClass('text-animate-hover')
   }, [])
-
+  
   return (
     <>
       <div className="container about-page">
@@ -33,7 +30,7 @@ const About = () => {
             />
           </h1>
           <p>
-            I am a second year student at Purdue University studying Computer Science and Mathematics with a concentration in Machine Intelligence.
+            I am a third year student at Purdue University studying Computer Science and Mathematics with a concentration in Machine Intelligence.
           </p>
           <p>
             I enjoy being a part of Hack the Future - an academic club on campus dedicated to improving the digital presence
@@ -67,7 +64,6 @@ const About = () => {
           </div>
         </div>
       </div>
-      <Loader type="pacman" />
     </>
   )
 }

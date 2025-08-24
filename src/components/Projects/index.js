@@ -1,12 +1,15 @@
 import React from "react";
-import Loader from "react-loaders";
+import { useEffect, useState } from 'react'
 import AnimatedLetters from "../AnimatedLetters";
 import "./index.scss";
 import intellijIcon from "../../assets/images/IntelliJ_IDEA_Icon.svg.png";
 
 const Projects = () => {
-    const letterClass = 'text-animate';
+    const [letterClass, setLetterClass] = useState('text-animate')
 
+    useEffect(() => {
+        setLetterClass('text-animate-hover')
+    }, [])
     return (
         <>
         <div className="container projects-page">
@@ -43,7 +46,7 @@ const Projects = () => {
                 </div>
             </div>
         </div>
-        <Loader type="pacman" />
+        
         </>
     );
 

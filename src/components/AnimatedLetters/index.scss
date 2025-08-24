@@ -3,7 +3,6 @@
     opacity: 0;
     animation: bounceIn;
     animation-duration: 1s;
-    animation-delay: 1s;
     animation-fill-mode: forwards;
     min-width: 10px;
   }
@@ -21,6 +20,5 @@
   
   @for $i from 1 through 35 {
     .text-animate._#{$i} {
-      animation-delay: #{$i / 10}s;
     }
   }
