@@ -28,6 +28,12 @@ const Projects = () => {
                             src={intellijIcon}
                             alt="Deprecated Controller Remover Plugin"
                         />
+                        <button 
+                            className="btn" 
+                            onClick={() => window.open('https://plugins.jetbrains.com/plugin/28069-deprecated-controller-remover/edit', '_blank')}
+                        >
+                            View Plugin
+                        </button>
                     </div>
                     <div className="content">
                         <p className="title">Deprecated Controller Remover</p>
@@ -36,12 +42,6 @@ const Projects = () => {
                             A JetBrains IDE plugin that helps developers remove deprecated controller methods 
                             from their codebase, improving code quality and maintainability.
                         </p>
-                        <button 
-                            className="btn" 
-                            onClick={() => window.open('https://plugins.jetbrains.com/plugin/28069-deprecated-controller-remover/edit', '_blank')}
-                        >
-                            View Plugin
-                        </button>
                     </div>
                 </div>
             </div>

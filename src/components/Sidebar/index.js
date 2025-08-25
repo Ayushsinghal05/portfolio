@@ -1,7 +1,6 @@
 import './index.scss'
 import { useState } from 'react'
 import LogoS from '../../assets/images/logo-s.png'
-import LogoSubtitle from '../../assets/images/logo_sub.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faLinkedin,
@@ -9,10 +8,6 @@ import {
   faGoogle,
 } from '@fortawesome/free-brands-svg-icons'
 import {
-  faHome,
-  faUser,
-  faEnvelope,
-  faSuitcase,
   faBars,
   faClose,
 } from '@fortawesome/free-solid-svg-icons'
@@ -22,56 +17,64 @@ const Sidebar = () => {
   const [showNav, setShowNav] = useState(false);
 
   return (
-    <div className="nav-bar">
-      <Link 
-        className="logo"
-        to="/"
-        onClick={() => setShowNav(false)}>
-        <img src={LogoS} alt="Logo" />
-        <img className="sub-logo" src={LogoSubtitle} alt="Ayush" />
-      </Link>
-      <nav className={showNav ? 'mobile-show' : ''}>
-        <NavLink 
-          exact="true"
-          activeclassname="active"
+    <div className="top-nav-bar">
+      <div className="nav-container">
+        <Link 
+          className="logo"
           to="/"
           onClick={() => setShowNav(false)}>
-          <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
-        </NavLink>
-        <NavLink 
-          activeclassname="active"
-          className="about-link"
-          to="/about"
-          onClick={() => setShowNav(false)}>
-          <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
-        </NavLink>
-        {
-        <NavLink
-          activeclassname="active"
-          className="projects-link"
-          to="/projects"
-          onClick={() => setShowNav(false)}
-        >
-          <FontAwesomeIcon icon={faSuitcase} color="#4d4d4e" />
-        </NavLink>
-        }
-        <NavLink
-          activeclassname="active"
-          className="contact-link"
-          to="/contact"
-          onClick={() => setShowNav(false)}
-        >
-          <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
-        </NavLink>
-        <FontAwesomeIcon 
-          onClick={() => setShowNav(false)}
-          icon={faClose}
-          color="#ffd700"
-          size="3x"
-          className='close-icon' />
-      </nav>
-      <ul>
-        <li>
+          <img src={LogoS} alt="Logo" />
+          <span className="logo-text">Ayush</span>
+        </Link>
+        
+        <nav className={showNav ? 'mobile-show' : ''}>
+          <NavLink 
+            exact="true"
+            activeclassname="active"
+            to="/"
+            onClick={() => setShowNav(false)}>
+            <span>Home</span>
+          </NavLink>
+          <NavLink 
+            activeclassname="active"
+            className="about-link"
+            to="/about"
+            onClick={() => setShowNav(false)}>
+            <span>About</span>
+          </NavLink>
+          <NavLink
+            activeclassname="active"
+            className="projects-link"
+            to="/projects"
+            onClick={() => setShowNav(false)}
+          >
+            <span>Projects</span>
+          </NavLink>
+          <NavLink
+            activeclassname="active"
+            className="blog-link"
+            to="/blog"
+            onClick={() => setShowNav(false)}
+          >
+            <span>Blog</span>
+          </NavLink>
+          <NavLink
+            activeclassname="active"
+            className="contact-link"
+            to="/contact"
+            onClick={() => setShowNav(false)}
+          >
+            <span>Contact</span>
+          </NavLink>
+          <FontAwesomeIcon 
+            onClick={() => setShowNav(false)}
+            icon={faClose}
+            color="#d4855a"
+            size="2x"
+            className='close-icon' />
+        </nav>
+
+        <div className="social-links">
           <a
             href="https://www.linkedin.com/in/ayush-singhal-83b748229/"
             target="_blank"
@@ -79,12 +82,9 @@ const Sidebar = () => {
           >
             <FontAwesomeIcon
               icon={faLinkedin}
-              color="#4d4d4e"
-              className="anchor-icon"
+              className="social-icon"
             />
           </a>
-        </li>
-        <li>
           <a
             href="https://github.com/Ayushsinghal05"
             target="_blank"
@@ -92,12 +92,9 @@ const Sidebar = () => {
           >
             <FontAwesomeIcon
               icon={faGithub}
-              color="#4d4d4e"
-              className="anchor-icon"
+              className="social-icon"
             />
           </a>
-        </li>
-        <li>
           <a
             href="mailto: singhal.ayush230@gmail.com"
             target="_blank"
@@ -105,18 +102,18 @@ const Sidebar = () => {
           >
             <FontAwesomeIcon
               icon={faGoogle}
-              color="#4d4d4e"
-              className="anchor-icon"
+              className="social-icon"
             />
           </a>
-        </li>
-      </ul>
-      <FontAwesomeIcon 
-          onClick={() => setShowNav(true)}
-          icon={faBars}
-          color="#ffd700"
-          size="3x"
-          className='hamburger-icon' />
+        </div>
+
+        <FontAwesomeIcon 
+            onClick={() => setShowNav(true)}
+            icon={faBars}
+            color="#d4855a"
+            size="2x"
+            className='hamburger-icon' />
+      </div>
     </div>
   )
 }
