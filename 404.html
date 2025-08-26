@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Page Not Found</title>
+    <script type="text/javascript">
+      // Function to get the base URL
+      function getBaseUrl() {
+        var pathparts = window.location.pathname.split('/');
+        // If your GitHub Pages project is at a sub-path like /repo-name/
+        // you might need to adjust this. For a root-level project, it's just '/'
+        // For example, if your URL is https://username.github.io/portfolio/,
+        // the base path would be '/portfolio/'
+        // This assumes your repository name is 'portfolio'
+        // If your GitHub Pages is served from the root of a gh-pages branch, it might just be '/'
+        if (pathparts.length > 2 && pathparts[1] === 'portfolio') { // Adjust 'portfolio' to your repository name if different
+          return '/' + pathparts[1] + '/';
+        }
+        return '/';
+      }
+
+      var baseUrl = getBaseUrl();
+      sessionStorage.redirect = location.href;
+      // Redirect to the base URL (which should serve index.html)
+      location.replace(baseUrl);
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
