@@ -5,11 +5,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faLinkedin,
   faGithub,
-  faGoogle,
 } from '@fortawesome/free-brands-svg-icons'
 import {
   faBars,
   faClose,
+  faEnvelope,
 } from '@fortawesome/free-solid-svg-icons'
 import { Link, NavLink } from 'react-router-dom'
 
@@ -101,7 +101,7 @@ const Sidebar = () => {
             rel="noreferrer"
           >
             <FontAwesomeIcon
-              icon={faGoogle}
+              icon={faEnvelope}
               className="social-icon"
             />
           </a>
